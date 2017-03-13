@@ -10,65 +10,11 @@
 
   </head>
   <body>
+  <a href="./coupon.html" style="color: red; width: 50px; height:50px;">Home</a>
   <div id="root"></div>
-  <TextArea type="text" class="searchInput"></TextArea>
-  <button class="searchButton"> Search </button>
-
-  <script>
-		function show_image(href, width, height, id) {
-			var img = document.createElement("img");
-			img.href = "#";
-			img.width = width;
-			img.height = height;
-			img.id = id;
 
 
-			// This next line will just add it to the <body> tag
-			//document.getElementById('coupon').appendChild(img);
-			document.body.appendChild(img);
 
-		}
-
-		function myFunction() {
-			var pge = ["images/coupon3.png", "/images/coupon2.jpeg", "images/coupon1.jpeg", "images/coupon1.jpeg"];
-
-			for(var i = 0; i < pge.length; i++){
-				show_image(pge[i], 200, 200, i)
-			}
-		}
-
-      var endPointLocation = [];
-
-        function geoFindMe() {
-        var output = document.getElementById("out");
-
-        if (!navigator.geolocation){
-          output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
-          return;
-        }
-
-        function success(position) {
-          var latitude  = position.coords.latitude;
-          var longitude = position.coords.longitude;
-          endPointLocation = [latitude, longitude];
-
-          output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
-
-          var img = new Image();
-          img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
-
-          output.appendChild(img);
-        }
-
-        function error() {
-          output.innerHTML = "Unable to retrieve your location";
-        }
-
-        output.innerHTML = "<p>Locating…</p>";
-
-        navigator.geolocation.getCurrentPosition(success, error);
-      }
-	</script>
   <script>
    function swipe() {
    var largeImage = document.getElementById('largeImage');
