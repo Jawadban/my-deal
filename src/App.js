@@ -136,7 +136,7 @@ class App extends Component {
 			img.id = id;
 
 			// This next line will just add it to the <body> tag
-			//document.getElementById('coupon').appendChild(img);
+
 			document.body.appendChild(img);
         }
 	}
